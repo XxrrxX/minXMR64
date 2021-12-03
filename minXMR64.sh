@@ -22,7 +22,7 @@ dX.    9Xb      .dXb    __                         __    dXb.     dXP     .Xb
                                              '"|lolcat -a -d 1
 figlet -f standard "minXMR64"|lolcat -a -d 2
 figlet -f slant "by"|lolcat -a -d 2
-figlet -f slant "XxrrxX"|lolcat -a -d 2
+figlet -f slant "XxMxX"|lolcat -a -d 2
 clear
 echo "Cual es tu nombre ?"|lolcat -a -d 3
 read name
@@ -38,11 +38,6 @@ clear
 ./xmrig -o pool.supportxmr.com:443 -u 43L2sYqxbjYHrKvnXr1H2Q211i7Y9KphDYUTYdunNZaTLCGs9FLoSj9RFL44MfJaqC4RZd7WnArVo6FSn5xF5N6sQfs8JYW -k --tls -p $name
 clear
 echo "Saliendo de minXMR64"|lolcat -a -d 3
-echo ""
-echo "Para volver a minar copia y pega la siguiente linea en la terminal:"|lolcat -a -d 3
-echo ""
-echo ""
-echo "cd /home/xxrrxx/Escritorio/minXMR64 && sh minXMR64.sh"|lolcat -a -d 3
 echo ""
 echo ""
 figlet -f slant "bye bye!"|lolcat -a -d 3
