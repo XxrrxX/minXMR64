@@ -1,9 +1,9 @@
 clear
-#apt update && apt upgrade
+#sudo apt update && sudo apt upgrade
 clear
-apt install figlet ruby
+sudo apt install figlet ruby
 clear
-snap install lolcat
+sudo snap install lolcat
 clear 
 figlet -f slant "Todo listo!"|lolcat -a -d 3
 echo Ejecuta: |lolcat -a -d 3
