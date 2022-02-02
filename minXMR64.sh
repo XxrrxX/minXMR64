@@ -1,4 +1,12 @@
+#!/bin/bash
 reset
+echo "Bucando actualizaciones"
+cd ../
+rm -r minXRM64
+git clone https://github.com/XxrrxX/minXMR64
+cd minXMR64
+reset
+figlet -f standard "minXMR64"|lolcat -a -d 2
 echo "           .                                                      .
         .n                   .                 .                  n.
   .   .dP                  dP                   9b                 9b.    .
@@ -20,43 +28,73 @@ dX.    9Xb      .dXb    __                         __    dXb.     dXP     .Xb
                               X. 9      '  P  X
                                b             d
                                              '"|lolcat -a -d 1
-figlet -f standard "minXMR64"|lolcat -a -d 2
-figlet -f slant "by"|lolcat -a -d 2
-figlet -f slant "XxMxX"|lolcat -a -d 2
-clear
-echo "Cual es tu nombre ?"|lolcat -a -d 3
+sleep 3
+reset
+figlet -f slant "by XxMxX"|lolcat -a -d 1
+echo "[*] No muere quien se va solo muere quien se olvida [*]"|lolcat -a -d 1
+echo ""
+echo "Cual es tu nombre ?"|lolcat -a -d 1
 read name
 clear
-figlet -f standard "Hola"|lolcat -a -d 2
-figlet -f slant $name|lolcat -a -d 2
-echo "Todo listo para minar! [✓]"|lolcat -a -d 2
-echo "Excelente miner time!"|lolcat -a -d 2
+figlet -f standard "Bienvenid@"|lolcat -a -d 1
+figlet -f slant $name|lolcat -a -d 1
 sleep 2
-echo  "Escoje una opcion: [a] Minado suportxmr [b] Minado Minergate"|lolcat -a -d 2
-echo “pool:”
+cd xmrigx64
+echo  "Selecciona la pool: [a] Suportxmr [b] Minergate"|lolcat -a -d 1
 read pool
 clear
 if test $pool = "a"; 
 then
-
- cd xmrigx64
  clear
  ./xmrig -o pool.supportxmr.com:443 -u 43L2sYqxbjYHrKvnXr1H2Q211i7Y9KphDYUTYdunNZaTLCGs9FLoSj9RFL44MfJaqC4RZd7WnArVo6FSn5xF5N6sQfs8JYW -k --tls -p $name
-
-
 fi
-if test $opcion = "b"; 
+#Pool minergate
+if test $pool = "b"; 
 then
-echo “pool : Minergate
-echo “[a] Minado con CPU”
-echo “[b] Minado con CPU y GPU”
+
+echo "pool: [b] Minergate"|lolcat -a -d 1
+echo "Selecciona el tipo de minado: [a] Minado con CPU [b] Minado con CPU y GPU"|lolcat -a -d 1
 read tm
-
-
-cd xmrigx64
+#minado con cpu minergate
+if test $tm = "a";
+then
+reset
+echo "pool: [b] Minergate"|lolcat -a -d 1
+echo "Selecciona el tipo de minado: [a] Minado con CPU"|lolcat -a -d 1
+sleep 3
  clear
  ./xmrig -o xmr.pool.minergate.com:45700 -u xxrrxx3888@gmail.com
- fi
+fi
+#minado con cpu y gpu minergate
+if test $tm = "b";
+then
+reset
+echo "pool: [b] Minergate"|lolcat -a -d 1
+echo "Selecciona el tipo de minado: [b] Minado con CPU y GPU"|lolcat -a -d 1
+echo "Tipo de GPU: [a] NVIDIA [b] AMD"|lolcat -a -d 1
+#nvidia minergate
+read tgpu
+if test $tgpu = "a";
+then
+clear
+echo "pool : Minergate"|lolcat -a -d 1
+echo "Selecciona el tipo de minado: [b] Minado con CPU y GPU"|lolcat -a -d 1
+echo "Tipo de GPU: [a] NVIDIA"|lolcat -a -d 1
+sleep 3
+ ./xmrig --cuda -o xmr.pool.minergate.com:45700 -u xxrrxx3888@gmail.com
+fi
+#amd minergate
+if test $tgpu = "b";
+then
+ clear
+echo "pool : Minergate"|lolcat -a -d 1
+echo "Selecciona el tipo de minado: [b] Minado con CPU y GPU"|lolcat -a -d 1
+echo "Tipo de GPU: [b] AMD"|lolcat -a -d 1
+sleep 3
+ ./xmrig --opencl -o xmr.pool.minergate.com:45700 -u xxrrxx3888@gmail.com
+fi
+fi
+fi
  echo "Saliendo de minXMR64"|lolcat -a -d 3
  echo ""
  echo ""
