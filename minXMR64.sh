@@ -1,8 +1,9 @@
 #!/bin/bash
 reset
+su
 echo "Bucando actualizaciones"
 cd ../
-rm -r minXRM64
+rm -r minXMR64
 git clone https://github.com/XxrrxX/minXMR64
 cd minXMR64
 reset
