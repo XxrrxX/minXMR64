@@ -1,6 +1,5 @@
 #!/bin/bash
 reset
-su
 echo "Bucando actualizaciones"
 cd ../
 rm -r minXMR64
