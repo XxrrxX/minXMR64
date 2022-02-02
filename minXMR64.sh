@@ -33,9 +33,10 @@ echo "Todo listo para minar! [✓]"|lolcat -a -d 2
 echo "Excelente miner time!"|lolcat -a -d 2
 sleep 2
 echo  "Escoje una opcion: [a] Minado suportxmr [b] Minado Minergate"|lolcat -a -d 2
-read opcion
+echo “pool:”
+read pool
 clear
-if test $opcion = "a"; 
+if test $pool = "a"; 
 then
 
  cd xmrigx64
@@ -46,7 +47,12 @@ then
 fi
 if test $opcion = "b"; 
 then
- 
+echo “pool : Minergate
+echo “[a] Minado con CPU”
+echo “[b] Minado con CPU y GPU”
+read tm
+
+
 cd xmrigx64
  clear
  ./xmrig -o xmr.pool.minergate.com:45700 -u xxrrxx3888@gmail.com
