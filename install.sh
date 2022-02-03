@@ -1,7 +1,7 @@
 clear
-#sudo apt update && sudo apt upgrade
+sudo apt update && sudo apt upgrade
 clear
-#sudo apt install figlet ruby
+sudo apt install figlet ruby
 clear
 sudo snap install lolcat
 clear 
