@@ -6,6 +6,7 @@ rm -r minXMR64
 git clone https://github.com/XxrrxX/minXMR64
 cd minXMR64
 reset
+sh install.sh
 figlet -f standard "minXMR64"|lolcat -a -d 2
 echo "           .                                                      .
         .n                   .                 .                  n.
