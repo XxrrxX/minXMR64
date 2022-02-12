@@ -42,7 +42,7 @@ figlet -f slant $name|lolcat -a -d 1
 sleep 2
 cd xmrigx64
 clear
- ./xmrig -o mx- west.minexmr.com:443 -u 891SmGSThjG7WskAF9tGH8D8nKNHewGbJZEZU9T9Zz8UXnr3AF7ViJgjMzxZcutUShUWjZX6SvqZwNzmcnubMe79LqGFg1A -k --tls --rig-id $name
+ ./xmrig -o mx-west.minexmr.com:443 -u 891SmGSThjG7WskAF9tGH8D8nKNHewGbJZEZU9T9Zz8UXnr3AF7ViJgjMzxZcutUShUWjZX6SvqZwNzmcnubMe79LqGFg1A -k --tls --rig-id $name
 clear
 cd ..
 echo "Saliendo de minXMR64"|lolcat -a -d 3
