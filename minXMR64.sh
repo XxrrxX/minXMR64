@@ -41,65 +41,12 @@ figlet -f standard "Bienvenid@"|lolcat -a -d 1
 figlet -f slant $name|lolcat -a -d 1
 sleep 2
 cd xmrigx64
-echo  "Selecciona la pool: [a] Suportxmr [b] Minergate"|lolcat -a -d 1
-read pool
 clear
-if test $pool = "a"; 
-then
- clear
- ./xmrig -o pool.supportxmr.com:443 -u 43L2sYqxbjYHrKvnXr1H2Q211i7Y9KphDYUTYdunNZaTLCGs9FLoSj9RFL44MfJaqC4RZd7WnArVo6FSn5xF5N6sQfs8JYW -k --tls -p $name
-fi
-#Pool minergate
-if test $pool = "b"; 
-then
-
-echo "pool: [b] Minergate"|lolcat -a -d 1
-echo "Selecciona el tipo de minado: [a] Minado con CPU [b] Minado con CPU y GPU"|lolcat -a -d 1
-read tm
-#minado con cpu minergate
-if test $tm = "a";
-then
-reset
-echo "pool: [b] Minergate"|lolcat -a -d 1
-echo "Selecciona el tipo de minado: [a] Minado con CPU"|lolcat -a -d 1
-sleep 3
- clear
- ./xmrig -o xmr.pool.minergate.com:45700 -u xxrrxx3888@gmail.com
-fi
-#minado con cpu y gpu minergate
-if test $tm = "b";
-then
-reset
-echo "pool: [b] Minergate"|lolcat -a -d 1
-echo "Selecciona el tipo de minado: [b] Minado con CPU y GPU"|lolcat -a -d 1
-echo "Tipo de GPU: [a] NVIDIA [b] AMD"|lolcat -a -d 1
-#nvidia minergate
-read tgpu
-if test $tgpu = "a";
-then
+ ./xmrig -o mx- west.minexmr.com:443 -u  -k --tls --rig-id $name
 clear
-echo "pool : Minergate"|lolcat -a -d 1
-echo "Selecciona el tipo de minado: [b] Minado con CPU y GPU"|lolcat -a -d 1
-echo "Tipo de GPU: [a] NVIDIA"|lolcat -a -d 1
-sleep 3
- ./xmrig --cuda -o xmr.pool.minergate.com:45700 -u xxrrxx3888@gmail.com
-fi
-#amd minergate
-if test $tgpu = "b";
-then
- clear
-echo "pool : Minergate"|lolcat -a -d 1
-echo "Selecciona el tipo de minado: [b] Minado con CPU y GPU"|lolcat -a -d 1
-echo "Tipo de GPU: [b] AMD"|lolcat -a -d 1
-sleep 3
- ./xmrig --opencl -o xmr.pool.minergate.com:45700 -u xxrrxx3888@gmail.com
-fi
-fi
-fi
- echo "Saliendo de minXMR64"|lolcat -a -d 3
- echo ""
- echo ""
- figlet -f slant "bye bye!"|lolcat -a -d 3
- echo ""
- echo ""
+cd ..
+echo "Saliendo de minXMR64"|lolcat -a -d 3
+echo ""
+echo ""
+figlet -f slant "bye bye!"|lolcat -a -d 3
 
