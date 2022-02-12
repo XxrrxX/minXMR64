@@ -7,10 +7,11 @@ sudo snap install lolcat
 clear 
 cd tunel/
 tar xvzf ngrok-stable-linux-amd64.tgz
+reset
 rm -r ngrok-stable-linux-amd64.tgz
 cd ..
 echo "coded by:"|lolcat -a -d 1
 figlet -f slant "XxrrxX"|lolcat -a -d 1
-echo Ejecuta: |lolcat -a -d 3
-echo sh minXMR64.sh |lolcat -a -d 3
+
+
 
