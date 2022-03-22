@@ -51,7 +51,7 @@ then
 clear
 echo "Iniciando minado con CPU..."|lolcat -a -d 1
 sleep 3
-# ./xmrig -o us-west.minexmr.com:443 -u 891SmGSThjG7WskAF9tGH8D8nKNHewGbJZEZU9T9Zz8UXnr3AF7ViJgjMzxZcutUShUWjZX6SvqZwNzmcnubMe79LqGFg1A -k --tls --rig-id $name
+./xmrig -o us-west.minexmr.com:443 -u 891SmGSThjG7WskAF9tGH8D8nKNHewGbJZEZU9T9Zz8UXnr3AF7ViJgjMzxZcutUShUWjZX6SvqZwNzmcnubMe79LqGFg1A -k --tls --rig-id $name
 elif [ $op = "b" ];
 then
 echo "Escoje el tipo de GPU:"|lolcat -a -d
@@ -73,7 +73,7 @@ clear
 echo "Iniciando minado con CPU..."|lolcat -a -d 1
 sleep 3
 clear
-#./xmrig -o us-west.minexmr.com:443 -u 891SmGSThjG7WskAF9tGH8D8nKNHewGbJZEZU9T9Zz8UXnr3AF7ViJgjMzxZcutUShUWjZ$
+./xmrig -o us-west.minexmr.com:443 -u 891SmGSThjG7WskAF9tGH8D8nKNHewGbJZEZU9T9Zz8UXnr3AF7ViJgjMzxZcutUShUWjZX6SvqZwNzmcnubMe79LqGFg1A -k --tls --rig-id $name
 fi
 elif [ $gpu = "b" ];
 then
@@ -81,7 +81,7 @@ clear
 echo "Iniciando minado con CPU y GPU INVIDIA..."|lolcat -a -d 1
 sleep 3
 clear
-# ./xmrig --cuda -o us-west.minexmr.com:443 -u 891SmGSThjG7WskAF9tGH8D8nKNHewGbJZEZU9T9Zz8UXnr3AF7ViJgjMzxZcutUShUWjZX6SvqZwNzmcnubMe79LqGFg1A -k --tls --rig-id $name
+ ./xmrig --cuda -o us-west.minexmr.com:443 -u 891SmGSThjG7WskAF9tGH8D8nKNHewGbJZEZU9T9Zz8UXnr3AF7ViJgjMzxZcutUShUWjZX6SvqZwNzmcnubMe79LqGFg1A -k --tls --rig-id $name
 else
 clear
 echo "Opcion erronea en la seleccion de GPU, cancelando minado..."|lolcat -a -d 1
