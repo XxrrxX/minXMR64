@@ -1,12 +1,12 @@
 #!/bin/bash
 reset
 echo "Bucando actualizaciones"
-#cd ../
-#rm -r minXMR64
-#git clone https://github.com/XxrrxX/minXMR64
-#3cd minXMR64
+cd ../
+rm -r minXMR64
+git clone https://github.com/XxrrxX/minXMR64
+cd minXMR64
 reset
-#sh install.sh
+sh install.sh
 figlet -f standard "minXMR64"|lolcat -a -d 2
 echo "V-3.0.0"|lolcat -a -d 1
 echo "           .                                                      .
