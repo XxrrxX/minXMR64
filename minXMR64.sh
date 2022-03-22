@@ -8,7 +8,7 @@ cd minXMR64
 reset
 sh install.sh
 figlet -f standard "minXMR64"|lolcat -a -d 2
-echo "V-3.0.0"|lolcat -a -d 1
+echo "V-3.0.1"|lolcat -a -d 1
 echo "           .                                                      .
         .n                   .                 .                  n.
   .   .dP                  dP                   9b                 9b.    .
