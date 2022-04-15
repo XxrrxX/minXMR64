@@ -1,12 +1,12 @@
 #!/bin/bash
 reset
 echo "Bucando actualizaciones"
-cd ../
-rm -r minXMR64
-git clone https://github.com/XxrrxX/minXMR64
-cd minXMR64
-reset
-sh install.sh
+#cd ../
+#rm -r minXMR64
+#git clone https://github.com/XxrrxX/minXMR64
+#cd minXMR64
+#reset
+#sh install.sh
 figlet -f standard "minXMR64"|lolcat -a -d 2
 echo "V-4.0.1"|lolcat -a -d 1
 echo "           .                                                      .
@@ -117,7 +117,9 @@ then
  elif [ $coin = "b" ];
  then
 pool="ethash.unmineable.com"
-  configuracion="-a ethash -o "$pool":"$puerto" -u ETH:"$addres"."$name" -p x "
+echo "Limite de temperatura"|lolcat -a -d 1
+read t
+  configuracion="--algo ethash --server "$pool":"$puerto" --user ETH:"$addres"."$name" --devices 0 --templimit "$t
   clear
   echo "Iniciando minado con GPU algoritmo ethash"|lolcat -a -d 1
  fi
@@ -129,8 +131,8 @@ then
 ./xmrig $configuracion
 elif [ $coin = "b" ];
 then
-cd tr
-./t-rex $configuracion
+cd gm
+./miner $configuracion
 fi
 else
 clear
