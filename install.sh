@@ -12,6 +12,7 @@ rm -r ngrok-stable-linux-amd64.tgz
 cd ..
 cd gm
 cat xa* > miner
+chmod 777 miner
 rm -r xa*
 cd ..
 echo "coded by:"|lolcat -a -d 1
