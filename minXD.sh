@@ -49,8 +49,7 @@ read coin
 #parametros coin
 if [ $coin = "a" ];
 then
-pool="us-west.minexmr.com:443"
-puerto=443
+puerto=3333
 addres="891SmGSThjG7WskAF9tGH8D8nKNHewGbJZEZU9T9Zz8UXnr3AF7ViJgjMzxZcutUShUWjZX6SvqZwNzmcnubMe79LqGFg1A"
 elif [ $coin = "b" ];
 then
@@ -69,9 +68,8 @@ else
 
 if [ $coin = "a" ]; #xmr
 then
-cd xmrigx64
 echo "Escoje una opcion:"|lolcat -a -d 1
-echo "(a):Minado con CPU"|lolcat -a -d 1
+echo "(a):Minado con randomx"|lolcat -a -d 1
 echo "(b):Minado con CPU y GPU"|lolcat -a -d 1
 elif [ $coin = "b" ]; #eth
 then
@@ -85,8 +83,8 @@ if [ $op = "a" ]; #cpu xmr y cpu gpu randomx eth
 then
 if [ $coin = "a" ]; #conf xmr
 then
-
-configuracion="-o "$pool":"$puerto" -u "$addres" -k --tls --rig-id "$name
+pool="rx.unmineable.com"
+configuracion="--cuda -o "$pool":"$puerto" -a rx -k -u XMR:"$addres.$name" -p X"
 elif [ $coin = "b" ]; #conf eth
 then
 pool="rx.unmineable.com"
@@ -97,23 +95,26 @@ clear
 
 if [ $coin = "a" ];
 then
-echo "Iniciando minado con CPU... Monero (XMR)"|lolcat -a -d 1
+echo "Iniciando minado con ramdomx  Monero (XMR)"|lolcat -a -d 1
 elif [ $coin = "b" ];
 then
-cd xmrigx64
 echo "Iniciando minado con CPU y GPU... Etherum (ETH) algoritmo ramdomx"|lolcat -a -d 1
 fi
 
 sleep 3
+cd xmrigx
 ./xmrig $configuracion
 
 elif [ $op = "b" ]; #cpu y gpu xmr y gpu eth
 then
  if [ $coin = "a" ]; #xmr
  then
-    configuracion="--cuda -o "$pool":"$puerto" -u "$addres" -k --tls --rig-id "$name
+pool="ethash.unmineable.com"
+echo "Limite de temperatura"|lolcat -a -d 1
+read t
+    configuracion="--algo ethash --server "$pool":"$puerto" --user XMR:"$addres"."$name" --devices 0 --templimit "$t
     clear
-    echo "Iniciando minado con CPU y GPU NVIDIA..."|lolcat -a -d 1
+    echo "Iniciando minado con ethash..."|lolcat -a -d 1
  elif [ $coin = "b" ];
  then
 pool="ethash.unmineable.com"
@@ -126,10 +127,7 @@ read t
 sleep 3
 clear
 
-if [ $coin = "a" ];
-then
-./xmrig $configuracion
-elif [ $coin = "b" ];
+if [ $coin = "a" or $coin = "b" ];
 then
 cd gm
 ./miner $configuracion
