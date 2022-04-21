@@ -102,7 +102,7 @@ echo "Iniciando minado con CPU y GPU... Etherum (ETH) algoritmo ramdomx"|lolcat 
 fi
 
 sleep 3
-cd xmrigx
+cd xmrigx64
 ./xmrig $configuracion
 
 elif [ $op = "b" ]; #cpu y gpu xmr y gpu eth
