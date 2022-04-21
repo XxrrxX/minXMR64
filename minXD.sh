@@ -70,7 +70,7 @@ if [ $coin = "a" ]; #xmr
 then
 echo "Escoje una opcion:"|lolcat -a -d 1
 echo "(a):Minado con randomx"|lolcat -a -d 1
-echo "(b):Minado con CPU y GPU"|lolcat -a -d 1
+echo "(b):Minado con ethash"|lolcat -a -d 1
 elif [ $coin = "b" ]; #eth
 then
 echo "Escoje una opcion:"|lolcat -a -d 1
@@ -126,12 +126,9 @@ read t
  fi
 sleep 3
 clear
-
-if [ $coin = "a" or $coin = "b" ];
-then
 cd gm
 ./miner $configuracion
-fi
+
 else
 clear
 echo "Opcion erronea en la seleccion de tipo de minado, cancelando minado..."|lolcat -a -d 1
