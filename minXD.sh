@@ -41,6 +41,10 @@ clear
 figlet -f standard "Bienvenid@"|lolcat -a -d 1
 figlet -f slant $name|lolcat -a -d 1
 sleep 2
+echo “Miner”|lolcat -a -d 1
+echo “(a):XxrrxX”|lolcat -a -d 1
+echo “(b):Drakpy”|lolcat -a -b 1
+read miner
 #seleccion de coin
 echo "Selecciona Coin"|lolcat -a -d 1
 echo "(a):Monero (XMR)"|lolcat -a -d 1
@@ -50,7 +54,13 @@ read coin
 if [ $coin = "a" ];
 then
 puerto=3333
+if [ $miner = "a" ];
+then
 addres="891SmGSThjG7WskAF9tGH8D8nKNHewGbJZEZU9T9Zz8UXnr3AF7ViJgjMzxZcutUShUWjZX6SvqZwNzmcnubMe79LqGFg1A"
+elif [ $miner = "b" ];
+then
+addres="8B1UfuR3RuYWqhei7DKz16MqPnhwb4Ang4f8hFpANoJqHqrqWXaevJHT2QfPzB37cbaVWhvcB1L5hR1YQW79y6ewAVsqQG7"
+fi
 elif [ $coin = "b" ];
 then
 puerto=3333
@@ -141,4 +151,3 @@ echo "Saliendo de minXMR64"|lolcat -a -d 3
 echo ""
 echo ""
 figlet -f slant "bye bye!"|lolcat -a -d 3
-
