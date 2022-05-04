@@ -43,7 +43,7 @@ figlet -f slant $name|lolcat -a -d 1
 sleep 2
 echo "Miner"|lolcat -a -d 1
 echo "(a):XxrrxX"|lolcat -a -d 1
-echo "(b):Drakpy"|lolcat -a -b 1
+echo "(b):Drakpy"|lolcat -a -d 1
 read miner
 #seleccion de coin
 echo "Selecciona Coin"|lolcat -a -d 1
