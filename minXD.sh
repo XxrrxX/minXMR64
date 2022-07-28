@@ -41,14 +41,14 @@ clear
 figlet -f standard "Bienvenid@"|lolcat -a -d 1
 figlet -f slant $name|lolcat -a -d 1
 sleep 2
-echo "Miner"|lolcat -a -d 1
+echo "A que direccion deseas minar?:"|lolcat -a -d 1
 echo "(a):XxrrxX"|lolcat -a -d 1
 echo "(b):Drakpy"|lolcat -a -d 1
 read miner
 #seleccion de coin
 echo "Selecciona Coin"|lolcat -a -d 1
 echo "(a):Monero (XMR)"|lolcat -a -d 1
-echo "(b):Etherum (ETH)"|lolcat -a -d 1
+echo "(b):Binancecoin (BNB)"|lolcat -a -d 1
 read coin
 #parametros coin
 if [ $coin = "a" ];
@@ -64,7 +64,11 @@ fi
 elif [ $coin = "b" ];
 then
 puerto=3333
+if [ $miner = "a" ];
+then
 addres="0x7299bdaa787cb2fd9ca768b53a248cc621cd8e5e"
+elif [ $miner = "b" ];
+addres=" "
 else
 coin=0
 fi
@@ -81,7 +85,7 @@ then
 echo "Escoje una opcion:"|lolcat -a -d 1
 echo "(a):Minado con randomx"|lolcat -a -d 1
 echo "(b):Minado con ethash"|lolcat -a -d 1
-elif [ $coin = "b" ]; #eth
+elif [ $coin = "b" ]; #bnb
 then
 echo "Escoje una opcion:"|lolcat -a -d 1
 echo "(a):Minado con CPU y GPU algoritmo randomx"|lolcat -a -d 1
@@ -89,26 +93,26 @@ echo "(b):Minado con GPU algoritmo ethash"|lolcat -a -d 1
 fi
 read op
 
-if [ $op = "a" ]; #cpu xmr y cpu gpu randomx eth
+if [ $op = "a" ]; #randomx
 then
 if [ $coin = "a" ]; #conf xmr
 then
 pool="rx.unmineable.com"
 configuracion="--cuda -o "$pool":"$puerto" -a rx -k -u XMR:"$addres.$name" -p X"
-elif [ $coin = "b" ]; #conf eth
+elif [ $coin = "b" ]; #conf bnb
 then
 pool="rx.unmineable.com"
-configuracion="--cuda -o "$pool":"$puerto" -a rx -k -u ETH:"$addres.$name" -p x "
+configuracion="--cuda -o "$pool":"$puerto" -a rx -k -u BNB:"$addres.$name" -p x "
 fi
 
 clear
 
 if [ $coin = "a" ];
 then
-echo "Iniciando minado con ramdomx  Monero (XMR)"|lolcat -a -d 1
+echo "Iniciando minado con ramdomx... Monero (XMR)"|lolcat -a -d 1
 elif [ $coin = "b" ];
 then
-echo "Iniciando minado con CPU y GPU... Etherum (ETH) algoritmo ramdomx"|lolcat -a -d 1
+echo "Iniciando minado con randomx... Binancecoin (BNB)"|lolcat -a -d 1
 fi
 
 sleep 3
@@ -124,15 +128,15 @@ echo "Limite de temperatura"|lolcat -a -d 1
 read t
     configuracion="--algo ethash --server "$pool":"$puerto" --user XMR:"$addres"."$name" --devices 0 --templimit "$t
     clear
-    echo "Iniciando minado con ethash..."|lolcat -a -d 1
+    echo "Iniciando minado con ethash... monero (XMR)"|lolcat -a -d 1
  elif [ $coin = "b" ];
  then
 pool="ethash.unmineable.com"
 echo "Limite de temperatura"|lolcat -a -d 1
 read t
-  configuracion="--algo ethash --server "$pool":"$puerto" --user ETH:"$addres"."$name" --devices 0 --templimit "$t
+  configuracion="--algo ethash --server "$pool":"$puerto" --user BNB:"$addres"."$name" --devices 0 --templimit "$t
   clear
-  echo "Iniciando minado con GPU algoritmo ethash"|lolcat -a -d 1
+  echo "Iniciando minado ethash... Binancecoin (BNB)"|lolcat -a -d 1
  fi
 sleep 3
 clear
