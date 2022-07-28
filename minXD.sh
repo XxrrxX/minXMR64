@@ -69,7 +69,7 @@ then
 addres="0x7299bdaa787cb2fd9ca768b53a248cc621cd8e5e"
 elif [ $miner = "b" ];
 then
-addres=" "
+addres="0xe26dfa2581629bbce4ec976be7c8b99d89b83cc1"
 fi
 else
 coin=0
