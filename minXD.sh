@@ -8,7 +8,7 @@ cd minXMR64
 reset
 sh install.sh
 figlet -f standard "minXMR64"|lolcat -a -d 2
-echo "V-5.0.0"|lolcat -a -d 1
+echo "V-6.0.0"|lolcat -a -d 1
 echo "           .                                                      .
         .n                   .                 .                  n.
   .   .dP                  dP                   9b                 9b.    .
@@ -68,7 +68,9 @@ if [ $miner = "a" ];
 then
 addres="0x7299bdaa787cb2fd9ca768b53a248cc621cd8e5e"
 elif [ $miner = "b" ];
+then
 addres=" "
+fi
 else
 coin=0
 fi
