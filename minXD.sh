@@ -63,7 +63,7 @@ addres="8B1UfuR3RuYWqhei7DKz16MqPnhwb4Ang4f8hFpANoJqHqrqWXaevJHT2QfPzB37cbaVWhvc
 fi
 elif [ $coin = "b" ];
 then
-puerto=13333
+puerto=3333
 if [ $miner = "a" ];
 then
 addres="0x7299bdaa787cb2fd9ca768b53a248cc621cd8e5e"
