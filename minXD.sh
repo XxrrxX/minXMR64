@@ -109,12 +109,12 @@ if [ $op = "a" ]; #3GB
 then
 if [ $coin = "a" ]; #conf xmr
 then
-pool="ethash.unmineable.com"
-configuracion="-a ethash -o "stratum+tcp://$pool":"$puerto" -a rx -k -u XMR:"$addres.$name""
+pool="autolykos.unmineable.com"
+configuracion="-a autolykos2 -o "stratum+tcp://$pool":"$puerto" -u XMR:"$addres.$name""
 elif [ $coin = "b" ]; #conf bnb
 then
-pool="ethash.unmineable.com"
-configuracion="-a ethash -o "stratum+tcp://$pool":"$puerto" -u BNB:"$addres.$name""
+pool="autolykos.unmineable.com"
+configuracion="-a autolykos2 -o "stratum+tcp://$pool":"$puerto" -u BNB:"$addres.$name""
 fi
 
 clear
