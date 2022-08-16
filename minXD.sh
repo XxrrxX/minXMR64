@@ -114,7 +114,7 @@ configuracion="-a ethash -o "stratum+tcp://$pool":"$puerto" -a rx -k -u XMR:"$ad
 elif [ $coin = "b" ]; #conf bnb
 then
 pool="ethash.unmineable.com"
-configuracion="-a ethash -o "stratum+ssl://$pool":"$puerto" -u BNB:"$addres.$name""
+configuracion="-a ethash -o "stratum+tcp://$pool":"$puerto" -u BNB:"$addres.$name""
 fi
 
 clear
