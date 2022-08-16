@@ -3,8 +3,7 @@ reset
 echo "Bucando actualizaciones"
 cd ../
 rm -r minXMR64
-git clo
-ne https://github.com/XxrrxX/minXMR64
+git clone https://github.com/XxrrxX/minXMR64
 cd minXMR64
 reset
 sh install.sh
@@ -98,12 +97,12 @@ if [ $op = "a" ]; #3GB
 then
 if [ $coin = "a" ]; #conf xmr
 then
-pool="xmr.unmineable.com"
+pool="ethash.unmineable.com"
 configuracion="-a ethash -o "stratum+tcp://$pool":"$puerto" -a rx -k -u XMR:"$addres.$name""
 elif [ $coin = "b" ]; #conf bnb
 then
 pool="ethash.unmineable.com"
-configuracion="-a ethash -o "stratum+tcp://$pool":"$puerto" -u BNB:"$addres.$name""
+configuracion="-a ethash -o "stratum+ssl://$pool":"$puerto" -u BNB:"$addres.$name""
 fi
 
 clear
