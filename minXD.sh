@@ -9,7 +9,7 @@ reset
 sh install.sh
 figlet -f standard "minXMR64"|lolcat -a -d 2
 echo "V-7.0.0"|lolcat -a -d 1
-echo " 　　███
+echo " 　　██
 　　　　　██▒▒██
 　　　　█▒▒▒▒▒██
 　　　██▒▒▒▓▓▒▒██　　█
@@ -20,7 +20,7 @@ echo " 　　███
 　　　█▒▒▒▓▓▓▒▒▒██████
 　　　██▒▒▒▓▒▒▒█████████████████
 　　████▒▒▒▒▒██████▒▒▒▒▒▒▒▒▒▒▒▒███
-　██▒▒██▒▒██████▒▒▒▓▓▓▓▓▓▒▒▒▒▒██
+ ██▒▒██▒▒██████▒▒▒▓▓▓▓▓▓▒▒▒▒▒██
 ██▒▒▒▒▒▒█████▒▒▒▒▓▓▓▓▓▓▓▓▒▒▒███
 　██▒▒▒▒███▒██▒▒▒▒▓▓▓▓▓▒▒▒▒██
 　　██████▒▒▒▒██▒▒▒▒▒▒▒▒▒████
@@ -116,8 +116,8 @@ echo "Iniciando minado con randomx... Binancecoin (BNB)"|lolcat -a -d 1
 fi
 
 sleep 3
-cd gm
-./miner $configuracion
+cd tr
+./t-rex $configuracion
 
 elif [ $op = "b" ]; #cpu y gpu xmr y gpu eth
 then
