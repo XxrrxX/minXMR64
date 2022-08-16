@@ -28,8 +28,7 @@ echo " 　　███
 　　　　　█▒▒▒▒▒▒▒██████████
 　　　　　██▒▒▒▒▒▒██
 　　　　　　　█▒▒▒▒██
-　　　　　　　██████
-"|lolcat -a -d 1
+　　　　　　　██████ "|lolcat -a -d 1
 sleep 3
 reset
 figlet -f slant "XxMxX"|lolcat -a -d 1
@@ -118,8 +117,8 @@ echo "Iniciando minado con randomx... Binancecoin (BNB)"|lolcat -a -d 1
 fi
 
 sleep 3
-cd xmrigx64
-./xmrig $configuracion
+cd gm
+./miner $configuracion
 
 elif [ $op = "b" ]; #cpu y gpu xmr y gpu eth
 then
