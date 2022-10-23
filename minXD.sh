@@ -57,7 +57,7 @@ echo "(b):Drakpy"|lolcat -a -d 1
 read miner
 #seleccion de coin
 echo "Selecciona Coin"|lolcat -a -d 1
-echo "(a):Monero (XMR)"|lolcat -a -d 1
+echo "(a):Monero (XRP)"|lolcat -a -d 1
 echo "(b):Binancecoin (BNB)"|lolcat -a -d 1
 read coin
 #parametros coin
@@ -66,10 +66,12 @@ then
 puerto=3333
 if [ $miner = "a" ];
 then
-addres="891SmGSThjG7WskAF9tGH8D8nKNHewGbJZEZU9T9Zz8UXnr3AF7ViJgjMzxZcutUShUWjZX6SvqZwNzmcnubMe79LqGFg1A"
+addres="rEb8TK3gBgk5auZkwc6sHnwrGVJH8DuaLh"
+memo=478580852
 elif [ $miner = "b" ];
 then
-addres="8B1UfuR3RuYWqhei7DKz16MqPnhwb4Ang4f8hFpANoJqHqrqWXaevJHT2QfPzB37cbaVWhvcB1L5hR1YQW79y6ewAVsqQG7"
+addres="Falta addres"
+memo="falta memo"
 fi
 elif [ $coin = "b" ];
 then
@@ -95,22 +97,22 @@ else
 if [ $coin = "a" ]; #xmr
 then
 echo "Escoje una opcion:"|lolcat -a -d 1
-echo "(a):Minado XMR 3GB"|lolcat -a -d 1
-echo "(b):Minado XMR ethash"|lolcat -a -d 1
+echo "(a):Minado XRP Autolykos"|lolcat -a -d 1
+echo "(b):Minado XRP Kapow"|lolcat -a -d 1
 elif [ $coin = "b" ]; #bnb
 then
 echo "Escoje una opcion:"|lolcat -a -d 1
-echo "(a):Minado BNB 3GB"|lolcat -a -d 1
+echo "(a):Minado BNB Autolykos"|lolcat -a -d 1
 echo "(b):Minado BNB ethash"|lolcat -a -d 1
 fi
 read op
 
-if [ $op = "a" ]; #3GB
+if [ $op = "a" ]; #Autolykos
 then
-if [ $coin = "a" ]; #conf xmr
+if [ $coin = "a" ]; #conf xrp
 then
 pool="autolykos.unmineable.com"
-configuracion="-a autolykos2 -o "stratum+tcp://$pool":"$puerto" -u XMR:"$addres.$name""
+configuracion="-a autolykos2 -o "stratum+tcp://$pool":"$puerto" -u XRP:"$addres.$memmo.$name""
 elif [ $coin = "b" ]; #conf bnb
 then
 pool="autolykos.unmineable.com"
@@ -121,10 +123,10 @@ clear
 
 if [ $coin = "a" ];
 then
-echo "Iniciando minado con ramdomx... Monero (XMR)"|lolcat -a -d 1
+echo "Iniciando minado ... Autolykos Ripple (XRP)"|lolcat -a -d 1
 elif [ $coin = "b" ];
 then
-echo "Iniciando minado con randomx... Binancecoin (BNB)"|lolcat -a -d 1
+echo "Iniciando minado... Autolykos Binancecoin (BNB)"|lolcat -a -d 1
 fi
 
 sleep 3
@@ -138,17 +140,17 @@ then
 pool="ethash.unmineable.com"
 echo "Limite de temperatura"|lolcat -a -d 1
 read t
-    configuracion="--algo ethash --server "$pool":"$puerto" --user XMR:"$addres"."$name" --devices 0 --templimit "$t
+    configuracion="--algo kapow --server "$pool":"$puerto" --user XRP:"$addres"."$memo"."$name" --devices 0 --templimit "$t
     clear
-    echo "Iniciando minado con ethash... monero (XMR)"|lolcat -a -d 1
+    echo "Iniciando minado Kapow... Ripple (XRP)"|lolcat -a -d 1
  elif [ $coin = "b" ];
  then
 pool="ethash.unmineable.com"
 echo "Limite de temperatura"|lolcat -a -d 1
 read t
-  configuracion="--algo ethash --server "$pool":"$puerto" --user BNB:"$addres"."$name" --devices 0 --templimit "$t
+  configuracion="--algo kapow --server "$pool":"$puerto" --user BNB:"$addres"."$name" --devices 0 --templimit "$t
   clear
-  echo "Iniciando minado ethash... Binancecoin (BNB)"|lolcat -a -d 1
+  echo "Iniciando minado kapow... Binancecoin (BNB)"|lolcat -a -d 1
  fi
 sleep 3
 clear
