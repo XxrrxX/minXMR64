@@ -112,7 +112,7 @@ then
 if [ $coin = "a" ]; #conf xrp
 then
 pool="stratum+ssl://autolykos-us.unmineable.com"
-configuracion="-a autolykos2 -o "$pool":"$puerto" -u XRP:"$addres.$memo.$name" -p x --no-strict-ssl"
+configuracion="-a autolykos2 -o "$pool":"$puerto" -u XRP:"$addres":"$memo.$name" -p x --no-strict-ssl"
 elif [ $coin = "b" ]; #conf bnb
 then
 pool="autolykos.unmineable.com"
@@ -140,7 +140,7 @@ then
 pool="stratum+ssl://kapow-us.unmineable.com"
 echo "Limite de temperatura"|lolcat -a -d 1
 read t
-    configuracion="--algo kapow --server "$pool":"$puerto" --user XRP:"$addres"."$memo"."$name" --devices 0 --templimit "$t
+    configuracion="--algo kapow --server "$pool":"$puerto" --user XRP:"$addres":"$memo"."$name" --devices 0 --templimit "$t
     clear
     echo "Iniciando minado Kapow... Ripple (XRP)"|lolcat -a -d 1
  elif [ $coin = "b" ];
