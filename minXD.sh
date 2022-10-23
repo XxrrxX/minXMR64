@@ -63,7 +63,7 @@ read coin
 #parametros coin
 if [ $coin = "a" ];
 then
-puerto=4444
+puerto=3333
 if [ $miner = "a" ];
 then
 addres="rEb8TK3gBgk5auZkwc6sHnwrGVJH8DuaLh"
@@ -112,11 +112,11 @@ then
 if [ $coin = "a" ]; #conf xrp
 then
 pool="autolykos.unmineable.com"
-configuracion="-a autolykos2 -o "stratum+ssl://$pool":"$puerto" -u XRP:"$addres.$memo.$name" -p x --no-strict-ssl"
+configuracion="-a autolykos2 -o "$pool":"$puerto" -u XRP:"$addres.$memo.$name""
 elif [ $coin = "b" ]; #conf bnb
 then
 pool="autolykos.unmineable.com"
-configuracion="-a autolykos2 -o "stratum+ssl://$pool":"$puerto" -u BNB:"$addres.$name""
+configuracion="-a autolykos2 -o "$pool":"$puerto" -u BNB:"$addres.$name""
 fi
 
 clear
@@ -137,7 +137,7 @@ elif [ $op = "b" ]; #cpu y gpu xmr y gpu eth
 then
  if [ $coin = "a" ]; #xmr
  then
-pool="ethash.unmineable.com"
+pool="kapow.unmineable.com"
 echo "Limite de temperatura"|lolcat -a -d 1
 read t
     configuracion="--algo kapow --server "$pool":"$puerto" --user XRP:"$addres"."$memo"."$name" --devices 0 --templimit "$t
