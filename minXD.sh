@@ -57,7 +57,7 @@ echo "(b):Drakpy"|lolcat -a -d 1
 read miner
 #seleccion de coin
 echo "Selecciona Coin"|lolcat -a -d 1
-echo "(a):Monero (XRP)"|lolcat -a -d 1
+echo "(a):Ripple (XRP)"|lolcat -a -d 1
 echo "(b):Binancecoin (BNB)"|lolcat -a -d 1
 read coin
 #parametros coin
@@ -112,11 +112,11 @@ then
 if [ $coin = "a" ]; #conf xrp
 then
 pool="autolykos.unmineable.com"
-configuracion="-a autolykos2 -o "stratum+tcp://$pool":"$puerto" -u XRP:"$addres.$memo.$name""
+configuracion="-a autolykos2 -o "stratum+ssl://$pool":"$puerto" -u XRP:"$addres.$memo.$name""
 elif [ $coin = "b" ]; #conf bnb
 then
 pool="autolykos.unmineable.com"
-configuracion="-a autolykos2 -o "stratum+tcp://$pool":"$puerto" -u BNB:"$addres.$name""
+configuracion="-a autolykos2 -o "stratum+ssl://$pool":"$puerto" -u BNB:"$addres.$name""
 fi
 
 clear
