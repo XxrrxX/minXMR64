@@ -63,7 +63,7 @@ read coin
 #parametros coin
 if [ $coin = "a" ];
 then
-puerto=443
+puerto=3333
 if [ $miner = "a" ];
 then
 addres="rEb8TK3gBgk5auZkwc6sHnwrGVJH8DuaLh"
