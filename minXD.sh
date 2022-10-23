@@ -67,7 +67,7 @@ puerto=3333
 if [ $miner = "a" ];
 then
 addres="rEb8TK3gBgk5auZkwc6sHnwrGVJH8DuaLh"
-memo=478580852
+memo="478580852"
 elif [ $miner = "b" ];
 then
 addres="Falta addres"
