@@ -111,8 +111,8 @@ if [ $op = "a" ]; #Autolykos
 then
 if [ $coin = "a" ]; #conf xrp
 then
-pool="stratum+tcp://autolykos.unmineable.com"
-configuracion="-a autolykos2 -o "$pool":"$puerto" -u XRP:"$addres.$memo.$name" -p x"
+pool="stratum+ssl://autolykos-us.unmineable.com:4444"
+configuracion="-a autolykos2 -o "$pool":"$puerto" -u XRP:"$addres.$memo.$name" -p x --no-strict-ssl"
 elif [ $coin = "b" ]; #conf bnb
 then
 pool="autolykos.unmineable.com"
