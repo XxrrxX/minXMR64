@@ -112,7 +112,7 @@ then
 if [ $coin = "a" ]; #conf xrp
 then
 pool="autolykos.unmineable.com"
-configuracion="-a autolykos2 -o "stratum+tcp://$pool":"$puerto" -u XRP:"$addres.$memmo.$name""
+configuracion="-a autolykos2 -o "stratum+tcp://$pool":"$puerto" -u XRP:"$addres.$memo.$name""
 elif [ $coin = "b" ]; #conf bnb
 then
 pool="autolykos.unmineable.com"
