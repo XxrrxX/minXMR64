@@ -63,11 +63,11 @@ read coin
 #parametros coin
 if [ $coin = "a" ];
 then
-puerto=3333
+puerto=4444
 if [ $miner = "a" ];
 then
 addres="rEb8TK3gBgk5auZkwc6sHnwrGVJH8DuaLh"
-memo="478580852"
+memo=478580852
 elif [ $miner = "b" ];
 then
 addres="Falta addres"
@@ -111,8 +111,8 @@ if [ $op = "a" ]; #Autolykos
 then
 if [ $coin = "a" ]; #conf xrp
 then
-pool="autolykos.unmineable.com"
-configuracion="-a autolykos2 -o "$pool":"$puerto" -u XRP:"$addres.$memo.$name""
+pool="stratum+ssl://autolykos.unmineable.com"
+configuracion="-a autolykos2 -o "$pool":"$puerto" -u XRP:"$addres.$memo.$name" -p x --no-strict-ssl"
 elif [ $coin = "b" ]; #conf bnb
 then
 pool="autolykos.unmineable.com"
