@@ -55,7 +55,7 @@ echo "Si deseas minar monero escribe (s) si no escribe (n)"|lolcat -a -d 1
 read op1
 if [ $op1 = "s" ];
 then
-cd /xmrigx64
+cd xmrigx64/
 sh minXMR-xmrig-randomx.sh
 elif [ $op1 = "n" ];
 then
