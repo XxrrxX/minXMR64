@@ -45,12 +45,6 @@ reset
 figlet -f slant "XxMxX"|lolcat -a -d 1
 echo "[*] No muere quien se va solo muere quien se olvida [*]"|lolcat -a -d 1
 echo ""
-echo "Cual es tu nombre ?"|lolcat -a -d 1
-read name
-clear
-figlet -f standard "Bienvenid@"|lolcat -a -d 1
-figlet -f slant $name|lolcat -a -d 1
-sleep 2
 echo "Si deseas minar monero escribe (s) si no escribe (n)"|lolcat -a -d 1
 read op1
 if [ $op1 = "s" ];
@@ -59,6 +53,12 @@ cd xmrigx64/
 sh minXMR-xmrig-randomx.sh
 elif [ $op1 = "n" ];
 then
+echo "Cual es tu nombre ?"|lolcat -a -d 1
+read name
+clear
+figlet -f standard "Bienvenid@"|lolcat -a -d 1
+figlet -f slant $name|lolcat -a -d 1
+sleep 2
 echo "A que direccion deseas minar?:"|lolcat -a -d 1
 echo "(a):XxrrxX"|lolcat -a -d 1
 echo "(b):Drakpy"|lolcat -a -d 1
