@@ -51,6 +51,14 @@ clear
 figlet -f standard "Bienvenid@"|lolcat -a -d 1
 figlet -f slant $name|lolcat -a -d 1
 sleep 2
+echo "Si deseas minar monero escribe (s) si no escribe (n)"|lolcat -a -d 1
+read op1
+if [ $op1 = "s" ];
+then
+cd /xmrig64
+sh xmrigx64/minXMR-xmrig-randomx.sh
+elif [ $op1 = "n" ];
+then
 echo "A que direccion deseas minar?:"|lolcat -a -d 1
 echo "(a):XxrrxX"|lolcat -a -d 1
 echo "(b):Drakpy"|lolcat -a -d 1
@@ -163,7 +171,7 @@ echo "Opcion erronea en la seleccion de tipo de minado, cancelando minado..."|lo
 sleep 3
 fi
 fi
-
+fi
 cd ..
 echo "Saliendo de minXMR64"|lolcat -a -d 3
 echo ""
